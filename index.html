@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zosky's game🗝️trader</title>
+    <script>
+        // Dynamically set base href based on environment
+        const isProd = window.location.hostname === 'zosky.github.io';
+        document.write(`<base href="${isProd ? 'https://zosky.github.io/gameTrader/' : '/'}" />`);
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+</body>
+</html>
