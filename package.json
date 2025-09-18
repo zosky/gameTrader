@@ -8,9 +8,9 @@
         "build": "vite build",
         "serve": "vite preview",
         "lint": "vue-tsc --noEmit && vite lint",
-        "json": "./scripts/git-hook-pre-push.sh",
+        "json": "node ./scripts/getData.js",
         "cachePrice": "node ./scripts/cacheKeyPrices.js",
-        "goTime": "npm run json && git push origin main"
+        "goTime": "npm run json && npm run cachePrice && git push origin main"
     },
     "devDependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.0",
