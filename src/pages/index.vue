@@ -9,7 +9,7 @@ const viewMode = ref('grid')
 const searchQuery = ref('')
 const sortOption = ref('name-asc')
 
-fetch('/gamelist.json')
+fetch('./gamelist.json')
     .then(res => res.json())
     .then(data => { 
         theD.value = data
@@ -17,7 +17,7 @@ fetch('/gamelist.json')
         filteredGames.value = processedGames.value
         applySorting()
     })
-fetch('/priceData.json')
+fetch('./priceData.json')
     .then(res => res.json())
     .then(data => { priceData.value = data })
 
