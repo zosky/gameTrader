@@ -10,7 +10,9 @@
         "lint": "vue-tsc --noEmit && vite lint",
         "json": "node ./scripts/getData.js",
         "cachePrice": "node ./scripts/cacheKeyPrices.js",
-        "goTime": "npm run json && npm run cachePrice && git push origin main"
+        "data:dl": "npm run json && npm run cachePrice",
+        "data:ul": "git push origin main",
+        "goTime": "npm run data:dl && npm run data:ul"
     },
     "devDependencies": {
         "@tailwindcss/aspect-ratio": "^0.4.0",
